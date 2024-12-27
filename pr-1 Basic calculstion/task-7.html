@@ -1,0 +1,19 @@
+<!-- Write a javascript Program to find  rate of interest.(compulsory user input)(p * r  * n / 100) -->
+
+<h1 style = "color: darkBlue"> ~: Rate of interest :~ <br></h1>
+
+<h2 id = "interest"></h2>
+
+<script type="text/javascript">
+
+    let p = parseInt(prompt("Enter the value of principal"));
+    let r = parseInt(prompt("Enter the value of rate"));
+    let n = parseInt(prompt("Enter the value of time"));
+
+    let ans = (p * r * n) / 100;
+    
+    document.write(`<br>`)
+    
+    document.getElementById("interest").innerHTML = `Rate of Intrest :~ ${ans}`;
+    
+</script>

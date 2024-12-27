@@ -1,0 +1,25 @@
+<!-- 2. Write a javascript Program to perform a swapping of two variables.(compulsory user input) -->
+
+<h1 style = "color: darkBlue"> ~~:: Swapping ::~~  <br> </h1>
+
+<h2 style="color: navy;" > -: Before swaping :-</h2>
+<h3 id = "before"></h3>
+
+<h2 style="color: navy;" > -: After swaping :-</h2>
+<h2 id = "swaping" ></h2>
+
+<script type="text/javascript">
+
+    var a = parseInt(prompt("Enter first number"));
+    var b = parseInt(prompt("Enter second number"));
+      
+    document.getElementById("before").innerHTML = `Value of A = ${a} <br> Value of B = ${b}`;
+
+    var c = a;
+    a = b;
+    b = c;
+
+    document.getElementById("swaping").innerHTML = `Value of A = ${a} <br> Value of B = ${b}`;
+
+
+</script>
