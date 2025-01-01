@@ -1,0 +1,56 @@
+<!-- 6.Write a JavaScript program to input marks of five subjects Physics, Chemistry, Biology, Mathematics and Computer. Calculate percentage and grade according to following
+
+Percentage >= 90% : Grade A
+Percentage >= 80% : Grade B
+Percentage >= 70% : Grade C
+Percentage >= 60% : Grade D 
+Percentage >= 50% : Grade E
+Percentage >= 40% : Grade F -->
+
+<h1 style="color: indigo;">~: Grade :~</h1>
+<h2 id="garde" style="color: PaleTurquoise;"></h2>
+
+
+<script type="text/javascript">
+
+    var phy = parseInt(prompt("Enter Physics marks: "));
+    var che = parseInt(prompt("Enter Chemistry marks: "));
+    var bio = parseInt(prompt("Enter Biology marks: "));
+    var mat = parseInt(prompt("Enter Mathematics marks: "));
+    var com = parseInt(prompt("Enter Computer marks: "));
+
+    document.write(`Physics = ${phy}`);
+    document.write(`Chemestry = ${che}`);
+    document.write(`Biology = ${bio}`);
+    document.write(`Mathematics = ${mat}`);
+    document.write(`Computer = ${com}`);
+
+
+    var total = (phy + che + bio + mat + com) / 5;
+
+    if (total >= 90 && total <= 100)
+    {
+        document.getElementById("garde").innerHTML = `Your garde is A`;
+    }
+    else if(total >= 80 && total <= 89 )
+    {
+        document.getElementById("garde").innerHTML = `Your garde is B`;
+    } 
+    else if(total >= 70 && total <= 79 )
+    {
+        document.getElementById("garde").innerHTML = `Your garde is C`;
+    } 
+    else if(total >= 60 && total <= 69 )
+    {
+        document.getElementById("garde").innerHTML = `Your garde is D`;
+    } 
+    else if(total >= 50 && total < 59 )
+    {
+        document.getElementById("garde").innerHTML = `Your garde is E`;
+    } 
+    else if(total >= 33 && total < 49 )
+    {
+        document.getElementById("garde").innerHTML = `Bhai tu rehne de Kheti kar....`;
+    } 
+
+</script>

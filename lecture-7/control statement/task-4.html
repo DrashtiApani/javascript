@@ -1,0 +1,67 @@
+<!-- 4.Write a JavaScript program to find which number is greter in 4 numbers using ladder if else -->
+
+<h1 style="color: Purple;">~: Maximum Number :~</h1>
+
+<script type="text/javascript">
+
+    var a = parseInt(prompt("Enter A number: "));
+    var b = parseInt(prompt("Enter B number: "));
+    var c = parseInt(prompt("Enter C number: "));
+    var d = parseInt(prompt("Enter D number: "));
+
+
+    document.write(` A = ${a} `)
+    document.write(` B = ${b} `)
+    document.write(` C = ${c} `)
+    document.write(` D = ${d} `)
+
+    if (a>b)
+    {   
+        if (a>c)
+        {
+            if (a>d)
+            {
+                document.write(`<br><h2> A is Maximum </h2>`);
+            }
+            else
+            {
+                document.write(`<br><h2> D is Maximum </h2>`);
+            }
+        }
+        else
+        {
+            if (c>d)
+            {
+                document.write(`<br><h2> C is Maximum </h2>`);
+            }
+            else
+            {
+                document.write(`<br><h2> D is Maximum </h2>`);
+            }
+        }
+    }
+    else
+    {
+        if (b>c)
+        {
+            if (b>d)
+            {
+                document.write(`<br><h2> B is Maximum </h2>`);
+            }
+            else
+            {
+                document.write(`<br><h2> D is Maximum </h2>`);
+            }
+        }
+        else if (a ==b && b == c && c == d)
+        {
+            document.write(`<br><h2> All are equal </h2>`);
+        }
+        else if  (a == b || b == c || c == d)
+        {
+            document.write(`<br><h2> Two are equal </h2>`);
+        }
+       
+        
+    }
+</script>

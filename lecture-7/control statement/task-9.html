@@ -1,0 +1,99 @@
+<!-- 9. Write a JavaScript program to find max of 5 number using nested if. -->
+
+<h1>~: Maximum Number :~</h1>
+<h2 id="max"></h2>
+
+<script type="text/javascript">
+
+    var a = parseInt(prompt("Enter A number: "));
+    var b = parseInt(prompt("Enter B number: "));
+    var c = parseInt(prompt("Enter C number: "));
+    var d = parseInt(prompt("Enter D number: "));
+    var e = parseInt(prompt("Enter E number: "));
+
+    document.write(` A = ${a} `)
+    document.write(` B = ${b} `)
+    document.write(` C = ${c} `)
+    document.write(` D = ${d} `)
+    document.write(` E = ${e} `)
+
+    if (a > b) {
+        if (a > c) {
+            if (a > d) {
+                if (a > e) {
+                    document.getElementById("max").innerHTML = ` A is Maximum `;
+                }
+                else {
+                    document.getElementById("max").innerHTML = ` E is Maximum `;
+                }
+            }
+            else {
+                if (d > e) {
+                    document.getElementById("max").innerHTML = ` D is Maximum `;
+                }
+                else {
+                    document.getElementById("max").innerHTML = ` E is Maximum `;
+                }
+            }
+        }
+        else {
+            if (c > d) {
+                if (c > e) {
+                    document.getElementById("max").innerHTML = ` C is Maximum `;
+                }
+                else {
+                    document.getElementById("max").innerHTML = ` E is Maximum `;
+                }
+            }
+            else {
+                if (d > e) {
+                    document.getElementById("max").innerHTML = ` D is Maximum `;
+                }
+                else {
+                    document.getElementById("max").innerHTML = ` E is Maximum `;
+                }
+            }
+
+        }
+    }
+    
+    else {
+        if (b > c) {
+            if (b > d) {
+                if (b > e) {
+                    document.getElementById("max").innerHTML = ` B is Maximum `;
+                }
+                else {
+                    document.getElementById("max").innerHTML = ` E is Maximum `;
+                }
+            }
+            else {
+                if (d > e) {
+                    document.getElementById("max").innerHTML = ` D is Maximum `;
+                }
+                else {
+                    document.getElementById("max").innerHTML = ` E is Maximum `;
+                }
+            }
+        }
+        else {
+            if (c > d) {
+                if (c > e) {
+                    document.getElementById("max").innerHTML = ` C is Maximum `;
+                }
+                else {
+                    document.getElementById("max").innerHTML = ` E is Maximum `;
+                }
+            }
+            else {
+                if (d > e) {
+                    document.getElementById("max").innerHTML = ` D is Maximum `;
+                }
+                else {
+                    document.getElementById("max").innerHTML = ` E is Maximum `;
+                }
+            }
+        }
+    }
+
+</script>

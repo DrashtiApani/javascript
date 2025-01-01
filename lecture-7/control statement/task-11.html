@@ -1,0 +1,41 @@
+<!-- 11. Write a JavaScript program to create basic calculator using ladder if else. -->
+
+<h1 style="color: indigo;">~: Calculator :~</h1>
+<h2 id = "ans"></h2>
+
+<script type="text/javascript">
+
+    var a = parseInt(prompt("Enter First number: "));   
+    var c = prompt("Enter operator: ");
+    var b = parseInt(prompt("Enter Second number: "));
+ 
+
+    document.write(` A = ${a} `)
+    document.write(`<br> B = ${b} `)
+
+
+    if (c == '+')
+    {
+        document.getElementById("ans").innerHTML = `${a} + ${b} = ${a+b}`;
+    }
+    else if (c == '-')
+    {
+        document.getElementById("ans").innerHTML = `${a} - ${b} = ${a-b}`;
+    }
+    else if (c == '*')
+    {
+        document.getElementById("ans").innerHTML = `${a} * ${b} = ${a*b}`;
+    }
+    else if (c == '/')
+    {
+    if (b == 0)
+    {
+        document.getElementById("ans").innerHTML = `Can't divide by zero`;
+    }
+    else
+    {
+        document.getElementById("ans").innerHTML = `${a} / ${b} = ${a/b}`;      
+    }
+    }
+
+</script>
