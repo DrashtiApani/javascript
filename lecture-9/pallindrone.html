@@ -1,0 +1,27 @@
+<h2 id="pallindrone"></h2>
+
+<script type="text/javascript">
+
+    var a = parseInt(prompt("Enter a number: "));
+  
+    var rev = 0,rem,num = a;
+   
+
+    while (a != 0)
+    {
+        rem = a % 10;
+        rev = rev * 10 + rem;
+        a = parseInt(a / 10);
+    }
+
+    if (num == rev)   
+    {
+        document.getElementById("pallindrone").innerHTML = `${num} is a pallindrone`;
+    }
+    else
+    {
+        document.getElementById("pallindrone").innerHTML = `${num} is not a pallindrone`;
+    }
+    
+
+</script>
