@@ -1,0 +1,48 @@
+<!-- 8. Write a JavaScript program to create basic calculator using switch case. (simple function use)Ex. User input a,b and select choice + , - , * , / 
+a=10
+b=5
+select choice + , - , * , /
++
+Ans = 15
+-
+Ans = 5;
+*
+Ans = 50
+/
+Ans = 2 -->
+
+<h1 style="color: purple;">~: Calculator :~</h1>
+<h2 id="ans"></h2>
+
+<script type="text/javascript">
+
+    var a = parseInt(prompt("Enter First number: "));
+    var c = prompt("Enter operator: ");
+    var b = parseInt(prompt("Enter Second number: "));
+
+
+    document.write(` A = ${a} `)
+    document.write(`<br> B = ${b} `)
+
+    function cal() {
+        switch (c) {
+            case '+':
+                document.getElementById("ans").innerHTML = `${a} + ${b} = ${a + b}`;
+                break;
+            case '-':
+                document.getElementById("ans").innerHTML = `${a} - ${b} = ${a - b}`;
+                break;
+            case '*':
+                document.getElementById("ans").innerHTML = `${a} * ${b} = ${a * b}`;
+                break;
+            case '/':
+                document.getElementById("ans").innerHTML = `${a} / ${b} = ${a / b}`;
+                break;
+            default:
+                document.getElementById("ans").innerHTML = `Please enter valid operator`;
+        }
+    }
+
+    cal();
+
+</script>

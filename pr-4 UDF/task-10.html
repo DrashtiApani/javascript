@@ -1,0 +1,27 @@
+<!-- 10.Write a JavaScript program to decide that you eligible for voting? (using all function) -->
+
+<h1 style="color: purple;">~: Voting :~</h1>
+<h2 id = "vote" style="color: PaleTurquoise;"></h2>
+
+<script>
+
+    var age = parseInt(prompt("Enter your age: "));
+
+
+    function voting(age)
+    {
+        if (age >= 18)
+        {
+            document.getElementById("vote").innerHTML = `You are eligible for voting .....`;
+        }
+        else
+        {
+            document.getElementById("vote").innerHTML = `Sorry Bachha you can't....`;   
+        }
+    }
+
+    voting(age);
+
+    
+
+</script>

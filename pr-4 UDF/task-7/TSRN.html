@@ -1,0 +1,38 @@
+<!-- 7.Write a JavaScript program to find which number is greter in 3 numbers using nested if else.(using all function) -->
+
+<h1 style="color: purple;">~: Maximum Number :~</h1>
+<h2 id="max"></h2>
+
+<script type="text/javascript">
+
+    var a = parseInt(prompt("Enter a number: "));
+    var b = parseInt(prompt("Enter b number: "));
+    var c = parseInt(prompt("Enter c number: "));
+
+    document.write(` A = ${a} `)
+    document.write(` B = ${b} `)
+    document.write(` C = ${c} `)
+
+    // TNRN
+
+    function check( a,b,c) {
+        if (a > b) {
+            if (a > c) {
+                document.getElementById("max").innerHTML = ` A is Maximum `;
+            }
+            else {
+                document.getElementById("max").innerHTML = ` C is Maximum `;
+            }
+        }
+        else {
+            if (b > c) {
+                document.getElementById("max").innerHTML = ` B is Maximum `;
+            }
+            else {
+                document.getElementById("max").innerHTML = ` C is Maximum `;
+            }
+        }
+    }
+    check(a,b,c);
+
+</script>

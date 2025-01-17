@@ -1,0 +1,33 @@
+<!-- 6.Write a javascript Program to perform a swapping of two variables.(all function use) -->
+
+<h1 > ~~:: Swapping ::~~   </h1>
+
+<h2 > -: Before swaping :-</h2>
+
+<h3 id = "before"></h3>
+
+<h2 > -: After swaping :-</h2>
+
+<h3 id = "swaping" ></h3>
+
+<script type="text/javascript">
+
+    var a = parseInt(prompt("Enter first number"));
+    var b = parseInt(prompt("Enter second number"));
+      
+// TNRN
+
+function check(a,b)
+{
+    var c = a;
+    a = b;
+    b = c;
+
+    document.getElementById("swaping").innerHTML = `Value of A = ${a} <br> Value of B = ${b}`;
+}
+
+document.getElementById("before").innerHTML = `Value of A = ${a} <br> Value of B = ${b}`;
+
+check(a,b);
+
+</script>

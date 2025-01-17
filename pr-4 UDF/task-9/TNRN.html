@@ -1,0 +1,32 @@
+<!-- 9.Write a JavaScript   program to input angles of a triangle and check whether triangle is valid or not.(using all function) -->
+
+<h1>~: Triangle :~</h1>
+<h2 id="triangle"></h2>
+
+<script type="text/javascript">
+
+    var a = parseInt(prompt("Enter Fist number: "));
+    var b = parseInt(prompt("Enter Second number: "));
+    var c = parseInt(prompt("Enter Third number: "));
+
+    document.write(` A = ${a} `);
+    document.write(` B = ${b} `);
+    document.write(` C = ${c} `);
+
+    function check() {
+        var ans = a + b + c
+        document.write(`<br><br> A + B + C = ${ans}`);
+
+        if (ans == 180) {
+            document.getElementById("triangle").innerHTML = `It's Tringle`;
+        }
+        else {
+            document.getElementById("triangle").innerHTML = `It's not Tringle`;
+        }
+
+    }
+
+    check();
+
+
+</script>

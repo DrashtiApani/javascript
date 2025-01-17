@@ -1,0 +1,22 @@
+<!-- 1.Write a JavaScript program to check number positive and negetive? (using simple function) -->
+
+<h1 style="color: purple;">~: Positive or Negetive :~</h1>
+<h2 id = "number"></h2>
+
+<script type="text/javascript">
+
+    function check(a)
+    {
+        if(a>0)
+        {
+           document.getElementById("number").innerHTML = `${a} is positive`;
+        }
+        else
+        {
+            document.getElementById("number").innerHTML = `${a} is negetive`;
+        }
+    }
+
+    check(a = parseInt(prompt("Enter a number: ")));
+
+</script>

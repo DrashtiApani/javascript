@@ -1,0 +1,44 @@
+<!-- 5.Write Write a JavaScript program to add two number of addition, subtraction, multiplication, division (using simple function) -->
+
+<h1 style="color: purple;">~: Mathematical Operations :~</h1>
+<h2 id="addition" ></h2>
+<h2 id="substraction" ></h2>
+<h2 id="multiplication" ></h2>
+<h2 id="division" ></h2>
+
+<script type="text/javascript">
+
+    var a = parseInt(prompt("Enter first number"));
+    var b = parseInt(prompt("Enter second number"));
+
+    document.write(`<h3> A = ${a} </h3>`)
+    document.write(` <h3> B = ${b} </h3>`)
+
+    // Addition
+    const add = ()=>
+    {
+        document.getElementById("addition").innerHTML =`Addition = ${a + b}`;
+    }
+    add();
+
+    // Substraction
+    const sub = ()=>
+    {
+        document.getElementById("substraction").innerHTML =`Substraction = ${a - b}`;
+    }
+    sub();
+
+    // Multiplication    
+    const mul = ()=>
+    {
+        document.getElementById("multiplication").innerHTML =`Multiplication = ${a * b}`;
+    }
+    mul();
+
+    // Division
+    const div = ()=>
+    {
+        document.getElementById("division").innerHTML =`Division = ${a / b}`;
+    }
+    div();
+</script>

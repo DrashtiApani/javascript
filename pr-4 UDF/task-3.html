@@ -1,0 +1,74 @@
+<!-- 3.Write a JavaScript program to find which number is greter in 4 numbers using nested if else. (using simple function) -->
+
+<h1 style="color: purple;">~: Maximum Number :~</h1>
+<h2 id = "max"></h2>
+
+<script type="text/javascript">
+
+    var a = parseInt(prompt("Enter a number: "));
+    var b = parseInt(prompt("Enter b number: "));
+    var c = parseInt(prompt("Enter c number: "));   
+    var d = parseInt(prompt("Enter d number: "));
+
+    document.write(` A = ${a} `)
+    document.write(` B = ${b} `)    
+    document.write(` C = ${c} `)
+    document.write(` D = ${d} `)
+
+    const max = (a,b,c,d) =>
+    {
+        if (a>b)
+        {
+            if (a>c)
+            {
+                if (a>d)
+                {
+                    document.getElementById("max").innerHTML = ` A is Maximum `;
+                }
+                else
+                {
+                    document.getElementById("max").innerHTML = ` D is Maximum `;
+                }
+            }
+            else
+            {
+                if (c>d)
+                {
+                    document.getElementById("max").innerHTML = ` C is Maximum `;
+                }
+                else
+                {
+                    document.getElementById("max").innerHTML = ` D is Maximum `;
+                }
+            }
+        }
+        else
+        {
+            if (b>c)
+            {   
+                if (b>d)
+                {   
+                    document.getElementById("max").innerHTML = ` B is Maximum `;
+                }
+                else
+                {   
+                    document.getElementById("max").innerHTML = ` D is Maximum `;
+                }
+            }
+            else
+            {
+                if (c>d)
+                {
+                    document.getElementById("max").innerHTML = ` C is Maximum `;
+                }
+                else    
+                {
+                    document.getElementById("max").innerHTML = ` D is Maximum `;
+                }
+            }
+        }
+    }
+
+    max(a,b,c,d);
+
+</script>
