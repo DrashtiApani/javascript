@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #name,
+        #date {
+            color: rgb(0, 4, 255);
+            font-size: 17px;
+            
+            margin: 10px;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+   <section>
+    <div class="container">
+
+        <div class="box">
+
+            <h1 align="center" style="font-size: 30px;"> Application Form <h1>
+
+            <div style="border: 1;">
+
+                <form align="center" style="border: 1px solid black;">
+                  
+                    <label for="date"> Date :~  </label>
+                    <input type="date" onkeyup="data()" id="date"  placeholder="Enter your date of birth"><br>
+
+                    <label for="name">Name :~       </label>
+                   <textarea name="name"  onkeyup="data()" rows="1" cols="53" id=""></textarea><br >
+
+                    <label for="email">Email :~</label>
+                    <input type="email" onkeyup="data()"  id="name" placeholder="Enter your email"><br>
+
+                    <label for="password">Password :~</label>
+                    <input type="password" onkeyup="data()"  id="name" placeholder="Enter your password"><br>
+
+                    <label for="contact">Contact :~</label>
+                    <input type="number"  onkeyup="data()" id="name" placeholder="Enter your contact number"><br>
+
+                    
+                    <label for="address">Address :~</label>
+                    <textarea name="address" onkeyup="data()"  rows="2" cols="50" id=""></textarea><br>
+
+                    <button style="padding:10px 10px ; background-color:lavender; color:navy ; border-radius:10px ; margin:20px " onkeyup="data()"  onmousedown="alert('You have to fill all the details carefully .')" >Submit</button>
+                </form>
+               
+            </div>
+
+        </div>
+   </section>
+
+   <h1 id="ans"></h1>
+
+
+    </div>
+
+    <!-- script start  -->
+    <script type="text/javascript">
+
+        let cnt = 0;
+        function data() {
+            cnt++;
+            document.getElementById('ans').innerHTML = cnt;
+        }
+    </script> 
+
+</body>
+
+</html>
+
+<!-- Name :- <input type="text" id="name"  />
+
+
+

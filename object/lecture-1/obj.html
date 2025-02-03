@@ -1,0 +1,37 @@
+<h2 id="name"></h2>
+<h2 id="mail"></h2>
+<h2 id="age"></h2>
+<h2 id="hobby"></h2>
+<h2 id="Address"></h2>
+
+<script type="text/javascript">
+
+    let obj = {
+
+        Name: "Drashti",
+        Email: "dfgfhh@gmail.com",
+        Age: 20,
+        Hobbies: ["cooking", "playing", "playing"],
+        Address: {
+            country: "India",
+            State: "Gujrat",
+            City: "Surat",
+            Area:
+            {
+                street: "abc",
+                pincode: 123,
+            }
+
+        }
+    }
+
+    console.log(obj);
+
+    document.getElementById("name").innerHTML = `Name :~ ${obj?.Name}`;
+    document.getElementById("mail").innerHTML = `Email :~ ${obj?.Email}`;
+    document.getElementById("age").innerHTML = ` Age :~ ${obj?.Age}`;
+    document.getElementById("hobby").innerHTML = `Hobbies :~ ${obj?.Hobbies}`;
+    document.getElementById("Address").innerHTML = `Address :~ ${obj?.Address?.State}`;
+
+
+</script>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table by Object</title>
+</head>
+
+<body>
+
+    <h1 align="center">~: Student Table :~</h1>
+
+
+    <table border="1" align="center" style="background-color: WhiteSmoke ; display: none;  " id="table">
+
+        <thead>
+            <th>Roll No.</th>
+            <th>Name</th>
+            <th>Grade</th>
+            <th>Percentage</th>
+            <th>Status</th>
+        </thead>
+
+        <tbody id="record" align="center">
+
+        </tbody>
+    </table>
+
+    <div align="center" Style="margin-top: 20px; ">
+
+        <button style="background-color: YellowGreen; border-radius: 10px; padding: 8px; "
+            onclick="pass()">Pass</button>
+
+        <button style="background-color: OrangeRed; border-radius: 10px; padding: 8px; margin: 10px"
+            onclick="fail()">Fail</button>
+
+        <button style="background-color: LightSkyBlue; border-radius: 10px; padding: 8px; margin: 10px"
+            onclick="alll()">All</button>
+
+            <button style="background-color: LightSkyBlue; border-radius: 10px; padding: 8px; margin: 10px"
+            onclick="printAlll()">Print</button>
+    </div>
+
+
+
+
+    <!-- script start -->
+    <script type="text/javascript">
+
+        let student = [
+            {
+                roll: 1,
+                name: "Vaghela Rishabh",
+                grade: "B+",
+                percentage: 73.59,
+                status: "Pass"
+            },
+
+            {
+                roll: 2,
+                name: "Kohli Virat",
+                grade: "A",
+                percentage: 86.75,
+                status: "Pass"
+            },
+            {
+                roll: 3,
+                name: "Ravindra Jadeja",
+                grade: "D",
+                percentage: 41.75,
+                status: "Pass"
+            },
+            {
+                roll: 4,
+                name: "Pandya Hardik",
+                grade: "B",
+                percentage: 69.92,
+                status: "Pass"
+            },
+            {
+                roll: 5,
+                name: "Gill Shubman",
+                grade: "E",
+                percentage: 28.75,
+                status: "Fail"
+            },
+            {
+                roll: 6,
+                name: "Sharma Rohit ",
+                grade: "A+",
+                percentage: 92,
+                status: "Pass"
+            },
+
+            {
+                roll: 7,
+                name: "Shikhar Dhawan",
+                grade: "C",
+                percentage: 55.36,
+                status: "Pass"
+            },
+            {
+                roll: 8,
+                name: "Ishan Kishan",
+                grade: "E",
+                percentage: 32.99,
+                status: "Fail"
+            },
+            {
+                roll: 9,
+                name: "Rahul Tewatia",
+                grade: "A",
+                percentage: 88.46,
+                status: "Pass"
+            },
+            {
+                roll: 10,
+                name: "Rishabhyo Pantyo",
+                grade: "A+",
+                percentage: 93.59,
+                status: "Pass"
+            },
+
+        ];
+
+        
+        
+
+
+        const printAlll = () => {
+            window.print(); // print the page
+        }
+    
+        const alll = () => {
+            alert("all");
+            let tbl = "";
+
+            student.map((value, index) => {
+
+                tbl += `
+               <tr>
+                   <td>${value.roll}</td>
+                   <td>${value.name}</td>
+                   <td>${value.grade}</td>
+                   <td>${value.percentage}</td>                
+                   <td>${value.status}</td>
+               </tr>`;
+
+            })
+            document.getElementById("record").innerHTML = tbl;
+            document.getElementById("table").style.display = "table"
+        }
+
+        const pass = () => {
+
+            let tbl = "";
+            let pass = student.filter((value) => value.status == "Pass");
+
+            pass.map((value, index) => {
+
+                tbl += `
+                <tr>
+                <td>${value.roll}</td>
+                <td>${value.name}</td>
+                <td>${value.grade}</td>
+                <td>${value.percentage}</td>                
+                <td>${value.status}</td>
+            </tr>`;
+
+            })
+
+            document.getElementById("record").innerHTML = tbl;
+            document.getElementById("table").style.display = "table"
+        }
+
+        const fail = () => {
+
+            let tbl = "";
+            let fail = student.filter((value) => value.status == "Fail");
+
+            fail.map((value, index) => {
+
+                tbl += `
+                <tr>
+                <td>${value.roll}</td>
+                <td>${value.name}</td>
+                <td>${value.grade}</td>
+                <td>${value.percentage}</td>                
+                <td>${value.status}</td>
+            </tr>`;
+
+            })
+
+            document.getElementById("record").innerHTML = tbl;
+            document.getElementById("table").style.display = "table"
+        }
+
+
+    </script>
+
+
+</body>
+
+</html>

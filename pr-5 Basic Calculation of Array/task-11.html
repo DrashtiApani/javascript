@@ -1,0 +1,26 @@
+<!-- 11. array descending  order sort. -->
+
+<script type="text/javascript">
+
+    let arr = [45,36,78,12,42,32,55,9,36,16,23,56]
+    let ans = 0;
+
+    for(var i = 0; i<arr.length; i++)
+    {
+        for(var j = i+1; j<arr.length; j++)
+        {
+            if(arr[i]<arr[j])
+            {
+                ans = arr[i];
+                arr[i] = arr[j];
+                arr[j] = ans;
+            }
+            
+            
+        }
+    }
+
+    console.log(arr);
+    
+
+</script>   

@@ -1,0 +1,14 @@
+<!-- 12.remove duplicate element in array -->
+
+<script type="text/javascript">
+
+    let arr = [11, 22,11, 33, 44, 55,44, 66, 77,55, 88, 99, 100 ]
+
+    let ans = arr.filter((value,index) => {
+
+        return arr.indexOf(value) == index;
+    })
+
+    console.log(ans);
+
+</script>

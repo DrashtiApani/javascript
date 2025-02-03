@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onclick Event</title>
+</head>
+
+<body>
+
+    <div class="table">
+        <div align="center">    
+
+            <table >
+
+                <tr>
+                    <th>Roll No.</th>
+                    <th>First Name</th>
+                    <th>Percentage</th>
+
+                </tr>
+
+                <tr>
+
+                    <td><input type="number" name="" id="roll"></td>
+                    <td><input type="text" name="" id="name"></td>
+                    <td><input type="number" name="" id="Percentage"></td>
+
+                </tr>
+                
+                <tr>
+
+                    <td></td>
+                    <td><input type="button" value="sum" onclick="add()"></td>
+                </tr>
+            </table>
+            <h1 id="ans"></h1>
+        </div>
+
+    </div>
+
+
+
+
+    <!-- script starr -->
+
+    <script type="text/javascript">
+
+        alert(" ~~: Enter the details of the student :~~")
+
+        const add = () => {
+
+            let roll = document.getElementById("roll").value; 
+            let name = document.getElementById("name").value;
+            let Percentage = document.getElementById("Percentage").value;
+
+             document.getElementById("ans").innerHTML = roll + " " + name + " " + Percentage;
+
+            // document.getElementById("roll").value = "";
+            document.getElementById("name").value = ""; // clear the input field
+            // document.getElementById("Percentage").value = ""; // if this not write than the input field will not clear
+        }
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<div class="box" align="center"></div>
+<button id = "show" onclick="show()" align="center">Show</button>
+<button id = "hide"  onclick="hide()" align="center">Hide</button>
+
+<script>
+
+    function show()
+    {
+        let box = document.querySelector('.box');
+        box.style.width = "300px";
+        box.style.height = "300px";
+        box.style.backgroundColor = "lavender";
+        
+
+        let hide = document.querySelector('#show');
+        hide.style.display = "none";
+    }
+
+    const hide = () => {
+        let show = document.querySelector('#show');
+        show.style.display = "block";
+
+        let box = document.querySelector('.box');
+        box.style.width = "0px";
+        box.style.height = "0px";
+
+        let hide = document.querySelector('#hide');
+        hide.style.display = "none";
+    }
+
+</script>

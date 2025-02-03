@@ -1,0 +1,65 @@
+<!-- 5. insert element in array position wise. -->
+<!-- 
+<script type="text/javascript"> 
+
+    let arr = [45,36,78,12,42,32,55,9,36,16,23,56]
+
+    let ans = arr.splice(3, 2, "Drashti");
+
+    console.log(arr);
+
+</script> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <table align="center">
+        <tr>
+            <td>Enter the number</td>
+            <td><input type="number" id="num"></td>
+        </tr>
+        <tr>
+                <td>Enter  position</td>
+            <td><input type="number" id="pos"></td>
+        </tr>
+        <br>
+        <tr>
+            <td><button onclick="newArr()">Array</button></td>
+        </tr>
+    </table>
+
+    <script type="text/javascript">
+
+
+        let arr = [11, 22, 33, 44, 55, 66, 77, 88, 99, 100, 111]
+        document.write("<br>")
+        document.write(arr);
+
+        function newArr() {
+
+
+            let num = document.getElementById("num").value;
+            let pos = document.getElementById("pos").value;
+
+            let ans = arr.splice(pos, 0, num);
+
+            console.log(arr);
+            document.write("<br>")
+            document.write(arr);
+        }
+
+
+    </script>
+
+
+</body>
+
+</html>
