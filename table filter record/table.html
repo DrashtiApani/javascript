@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <h1 align="center">Employee Data</h1>
+    <table  align="center" cellpadding="5">
+        
+        <tr>
+            <td><label for="">Student Name :- </label></td>
+            <td><input type="text" id="name" placeholder="Enter name"></td>
+            <td><input type="button" value="Name" onclick="Name()"></td>          
+        </tr>
+
+        <tr>
+            <td><label >Gender :- </label></td>
+            <td><input type="text" id="gender" placeholder="Enter Gender"></td>
+            <td><input type="button" value="Search" onclick="Gender()"></td>
+
+               <!-- <td><select name="gender" id="gender">
+                    <option value="gender">-- Gender -- </option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>    
+                </select>  
+                </td> -->      
+        </tr>
+
+        <tr>
+            <td><label for="">Grade :- </label></td>
+            <td><input type="text" id="grade" placeholder="Enter Grade"></td>
+            <td><input type="button" value="Grade" onclick="Grade()"></td>          
+        </tr>
+
+        <tr>
+            <td><label for="">Percentage :- </label></td>
+            <td><input type="text" id="percentage" placeholder="Enter Percentage start"></td>  
+            <td>   to</td>
+            <td><input type="text" id="percentage1" placeholder="Enter Percentage end"></td>
+
+            <td><input type="button" value="Percentage" onclick="percentagee()"></td>          
+        </tr>
+
+
+     
+
+        <tr  width="100%">
+            <td><input type="button" value="Reset" onclick="Reset()"></td>
+        </tr>
+    </table>
+    <br>
+   
+     
+       
+  
+
+    <table border="1" align="center" cellpadding="10" cellspacing="3">
+        <thead>
+            <th>RollNo</th>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Maths</th>
+            <th>Physics</th>
+            <th>Chemistry</th>
+            <th>Percentage</th>
+            <th>Grade</th>
+        </thead>
+        <tbody id="tableData">
+
+        </tbody>
+    </table>
+
+    <script type="text/javascript" src="./table.js">
+
+    </script>
+
+</body>
+</html>
