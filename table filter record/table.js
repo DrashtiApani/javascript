@@ -305,10 +305,10 @@ const Gender = () => {
   let gender = document.getElementById(`gender`).value;
 
   let filterGender = record.filter((val, index) => {
-    return gender == val.Gender;
+    return val.Gender.includes(gender);
   })
 
-  document.getElementById(`gender`).value = "";
+  // document.getElementById(`gender`).value = "";
 
   let tbl = "";
   filterGender.map((val) => {
