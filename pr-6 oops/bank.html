@@ -1,0 +1,212 @@
+<!-- 2. Write a JavaScript program that creates a class called "BankAccount" with properties for account number and balance. Include methods to deposit and withdraw money from the account. Create some instances of the "BankAccount" class, deposit some money, and withdraw a portion of it. -->
+
+
+<!-- <script>   ==> statically
+
+    class Bank {
+        constructor(acno,name,balance){
+            this.acno = acno;
+            this.name = name;
+            this.balance = balance;
+        }
+
+        deposit(amount){
+            this.balance = this.balance + amount;
+            console.log(`Amount ${amount} Deposited Successfully`);
+        }
+
+        withdraw(amount){
+            if(this.balance < amount){
+                console.log("Insufficient Balance");
+                
+            }
+            else{
+                this.balance = this.balance - amount;
+                console.log(`Amount ${amount} Withdraw Successfully`);
+            }
+        }
+    }
+
+    let bank = new Bank(2486,"Abhay",1000);
+
+    bank.deposit(1000);
+    bank.withdraw(2000);
+    bank.deposit(6000);
+
+</script> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Account</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 500px;
+            margin: 0;
+        }
+
+        .bank-container {
+            background-color: #fff;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #3b3b3b;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        .input-group label {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+        }
+
+        .output {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f1f1f1;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bank-container">
+        <h2>Bank Account</h2>
+        <div class="input-group">
+            <label for="acno">Account Number:</label>
+            <input type="number" id="acno" placeholder="Enter Account Number">
+        </div>
+        <div class="input-group">
+            <label for="name">Account Holder Name:</label>
+            <input type="text" id="name" placeholder="Enter Account Holder Name">
+        </div>
+        <div class="input-group">
+            <label for="balance">Initial Balance:</label>
+            <input type="number" id="balance" placeholder="Enter Initial Balance">
+        </div>
+        <button class="btn" id="createAccountBtn">Create Account</button>
+
+        <div class="output" id="output"></div>
+
+        <div id="actions" style="display: none;">
+            <button class="btn" id="depositBtn">Deposit</button>
+            <button class="btn" id="withdrawBtn">Withdraw</button>
+            <button class="btn" id="checkBalanceBtn">Check Balance</button>
+            <button class="btn" id="exitBtn">Exit</button>
+        </div>
+    </div>
+
+    <script>
+        class Bank {
+            constructor(acno, name, balance){
+                this.acno = acno;
+                this.name = name;
+                this.balance = balance;
+            }
+
+            deposit(amount){
+                this.balance += amount;
+                return `Amount ${amount} Deposited Successfully. Current Balance: ${this.balance}`;
+            }
+
+            withdraw(amount){
+                if(this.balance < amount){
+                    return "Insufficient Balance";
+                }
+                else{
+                    this.balance -= amount;
+                    return `Amount ${amount} Withdrawn Successfully. Current Balance: ${this.balance}`;
+                }
+            }
+
+            getBalance() {
+                return `Account Holder: ${this.name} (Account No: ${this.acno})\nCurrent Balance: ${this.balance}`;
+            }
+        }
+
+        let bank = null;
+
+        document.getElementById('createAccountBtn').addEventListener('click', () => {
+            const acno = parseInt(document.getElementById('acno').value);
+            const name = document.getElementById('name').value;
+            const balance = parseInt(document.getElementById('balance').value);
+
+            if (!acno || !name || !balance) {
+                document.getElementById('output').textContent = "Please provide valid details to create an account!";
+                return;
+            }
+
+            bank = new Bank(acno, name, balance);
+            document.getElementById('output').textContent = `Account Created Successfully for ${name}.`;
+
+            // Show action buttons after account creation
+            document.getElementById('actions').style.display = 'block';
+        });
+
+        document.getElementById('depositBtn').addEventListener('click', () => {
+            const amount = prompt("Enter deposit amount:");
+            if(amount) {
+                document.getElementById('output').textContent = bank.deposit(parseInt(amount));
+            }
+        });
+
+        document.getElementById('withdrawBtn').addEventListener('click', () => {
+            const amount = prompt("Enter withdraw amount:");
+            if(amount) {
+                document.getElementById('output').textContent = bank.withdraw(parseInt(amount));
+            }
+        });
+
+        document.getElementById('checkBalanceBtn').addEventListener('click', () => {
+            document.getElementById('output').textContent = bank.getBalance();
+        });
+
+        document.getElementById('exitBtn').addEventListener('click', () => {
+            document.getElementById('output').textContent = `Final Total Balance: ${bank.balance}`;
+            document.getElementById('actions').style.display = 'none';
+        });
+    </script>
+
+</body>
+</html>

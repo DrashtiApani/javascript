@@ -1,0 +1,113 @@
+<!-- <script>
+
+    class Bank {
+        constructor(acno,name,balance){
+            this.acno = acno;
+            this.name = name;
+            this.balance = balance;
+        }
+
+        deposit(amount){
+            this.balance = this.balance + amount;
+            console.log(`Amount ${amount} Deposited Successfully`);
+        }
+
+        withdraw(amount){
+            if(this.balance < amount){
+                console.log("Insufficient Balance");
+                
+            }
+            else{
+                this.balance = this.balance - amount;
+                console.log(`Amount ${amount} Withdraw Successfully`);
+            }
+        }
+    }
+
+    let bank = new Bank(2486,"Abhay",1000);
+
+    bank.deposit(1000);
+    bank.withdraw(2000);
+    bank.deposit(6000);
+
+
+
+   
+
+</script> -->
+
+
+<script>
+
+    class Bank {
+        constructor(acno, name, balance){
+            this.acno = acno;
+            this.name = name;
+            this.balance = balance;
+        }
+
+        deposit(amount){
+            this.balance += amount;
+            console.log(`Amount ${amount} Deposited Successfully`);
+        }
+
+        withdraw(amount){
+            if(this.balance < amount){
+                console.log("Insufficient Balance");
+            }
+            else{
+                this.balance -= amount;
+                console.log(`Amount ${amount} Withdrawn Successfully`);
+            }
+        }
+
+        getBalance() {
+            console.log(`Account Holder: ${this.name} (Account No: ${this.acno})`);
+            console.log(`Current Balance: ${this.balance}`);
+        }
+    }
+
+    // Dynamically get user input
+    let acno = prompt("Enter Account Number:");
+    let name = prompt("Enter Account Holder Name:");
+    let balance = parseFloat(prompt("Enter Initial Balance:"));
+
+    // Create a new Bank object based on user input
+    let bank = new Bank(acno, name, balance);
+
+    // Show menu for actions
+    let continueActions = true;
+
+    while (continueActions) {
+        let action = prompt("Choose an action: (1) Deposit (2) Withdraw (3) Check Balance (4) Exit");
+
+        switch (action) {
+            case '1':
+                let depositAmount = parseFloat(prompt("Enter deposit amount:"));
+                bank.deposit(depositAmount);
+                break;
+
+            case '2':
+                let withdrawAmount = parseFloat(prompt("Enter withdraw amount:"));
+                bank.withdraw(withdrawAmount);
+                break;
+
+            case '3':
+                bank.getBalance();
+                break;
+
+            case '4':
+                // Display account details and final balance
+                console.log(`Account Holder: ${bank.name} (Account No: ${bank.acno})`);
+                console.log(`Final Total Balance: ${bank.balance}`);
+                continueActions = false;
+                break;
+
+            default:
+                console.log("Invalid option, please try again.");
+                break;
+        }
+    }
+
+</script>
+

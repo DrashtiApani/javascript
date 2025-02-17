@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div align="center">
+        <h2>Todo list</h2>
+
+        <table border="1">
+          
+            <thead>
+                <th>A/c no</th>
+                <th> Name</th>
+                <th>Balance</th>
+                <th>Withdraw</th>
+                <th>Deposit</th>
+            </thead>
+
+            <tbody>
+            </tbody>
+
+        </table>
+
+        <input type="button" value="submit" onclick="addTask()">
+
+        <!-- <tr>
+            <td>Add Task :- </td>
+            <td><input type="text" id="task"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="button" onclick="addTask()" value="submit"></td> -->
+        </tr> 
+        <h2>View Task</h2>
+
+
+        <table border="1">
+
+            <thead>
+                <th>Name</th>
+                <th>Gender</th>
+                <th>Age</th>
+                <th>city</th>
+            </thead>
+
+            <thead>
+                <th>Id</th>
+                <th>Task</th>
+            </thead>
+            <tbody id="todolist"></tbody>
+        </table>
+    </div>
+
+
+
+    <script type="text/javascript">
+
+        let record = [];
+        const viewTask = () => {
+            let tbl = "";
+            record.map((val, index) => {
+                tbl += `
+                    <tr>
+                        <td>${val?.taskid}</td>
+                        <td>${val?.taskname}</td>
+                    </tr>
+                `
+            })
+            document.getElementById('todolist').innerHTML = tbl;
+        }
+
+        viewTask();
+        const addTask = () => {
+            let task = document.getElementById('task').value;
+            let dup = record.filter((val) => {
+                return val.taskname == task
+
+            })
+            if (dup.length == 1) {
+                alert("Task is already exists");
+                document.getElementById('task').value = "";
+                return false;
+            }
+            let obj = {
+                taskid: parseInt(Math.random() * 1000000),
+                taskname: task
+            }
+            record.push(obj)
+            document.getElementById('task').value = "";
+            alert("task successfully add");
+            viewTask();
+        }
+    </script>
+</body>
+
+</html>

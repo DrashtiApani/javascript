@@ -1,0 +1,30 @@
+<script>
+
+class car{
+
+    constructor(name,color,speed){
+        this.name = name;
+        this.color = color;
+        this.speed = speed;
+    }
+
+    details(){
+        console.log(`Car name :~ ${this.name} `);
+        console.log(`Car color :~ ${this.color}`);
+        console.log(`Car speed :~ ${this.speed}`);
+    }
+
+}
+
+let car1 = new car("camry","white",180);
+let car2 = new car("innova","black",180);
+let car3 = new car("creta","ivory",180);
+
+let arr = [car1,car2,car3];
+
+arr.map((value) => {
+    value.details();
+})
+
+
+</script>

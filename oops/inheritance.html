@@ -1,0 +1,127 @@
+<script>
+
+// [ ==> with return perametars in constructor in single class ]
+// class A {
+//    constructor(a,b) {
+//         this.a = a;
+//         this.b = b;
+//     }
+//         add() {
+//         console.log(`Sum :~ ${this.a + this.b}`); 
+//     }   
+// }
+// let a = new A(10,5);
+// a.add();
+
+
+
+
+
+
+
+// [ ==> with return perametars in constructor in two class ]
+// class A{
+
+//     constructor(a,b){
+//         this.a = a;
+//         this.b = b;
+//     }
+
+//     add(){
+//         console.log(`Sum :~ ${this.a + this.b}`);
+//     }
+// }
+// class B extends A{           // extends A means B is child class of A and also to joint two class //
+//     constructor(a,b){
+//         super(a,b);
+//     }
+//     sum(){
+//         this.add();
+//     }
+// }
+// let b = new B(10,5);
+// b.sum();
+
+
+
+
+
+
+
+
+
+// [ ==> without return perametars in constructor in single class ]
+//   class A{
+//     constructor(a,b){
+//         this.a = a;
+//         this.b = b;
+//     }
+//     sum (){
+//         console.log(`Sum :~ ${this.a + this.b}`);
+//     }
+//   }
+//   class B extends A{
+//     constructor(a,b){
+//         super(a,b);
+//     }
+//     ans(){
+//         this.sum();
+//     }
+//     mul(){
+//         console.log(`Mul :~ ${this.a * this.b}`);
+//     }
+//   }
+//   class C extends B{
+//     constructor(a,b){
+        // super(a,b);                  // super keyword is used to call parent class constructor //
+//     }
+//   }
+//   let c = new C(20,10);
+//   c.ans();
+//   c.mul();
+
+
+
+
+
+
+
+// class A{
+//     constructor(name,city,age){
+//         this.name = name;
+//         this.city = city; 
+//         this.age = age;        
+//     }
+//     users(){
+//         let data = [
+//             {   Name : "Abhay", city :"Gandhinagar" , age : 19},
+//             {   Name : "Nirbhay", city :"Vapi" , age : 25},       
+//         ]
+//         console.log(data);
+//     }
+// }
+// class B extends A{
+//     constructor(name,city,age){
+//         super(name,city,age);
+//     }
+//     details(){
+//         console.log(`Name :~ ${this.name}`);
+//         console.log(`City :~ ${this.city}`);
+//         console.log(`Age :~ ${this.age}`);
+//     }
+// }
+
+// let d = new B("Drashti","Surat",22);
+// // d.details();
+// d.users();
+
+
+
+
+
+
+
+
+
+
+</script>
