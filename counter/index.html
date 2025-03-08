@@ -1,0 +1,196 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+</head>
+
+<body>
+
+    <div align="center">
+
+
+        <h1 align="center" style="background-color: cornflowerblue; color: white; padding: 30px;">Counter</h1>
+        <h2 id="count"></h2>
+
+        <div align="center" style="background-color: lavender; padding: 20px;">
+            <button style="background-color: rgba(255, 5, 5, 0.628); padding: 10px;" onclick="increment()">+</button>
+            <button style="padding: 10px; margin: 0px 20px; background-color: rgba(255, 5, 5, 0.628);"
+                onclick="decrement()" id="disable">-</button>
+        </div>
+
+    </div>
+    <script>
+        let cnt = 0;
+        let disable = document.getElementById("disable");
+
+        disable.disabled = true;
+
+        document.getElementById("count").innerHTML = cnt;
+
+        function increment() {
+            cnt++;
+            document.getElementById("count").innerHTML = cnt;
+            
+            if(cnt > 0){
+                disable.disabled = false;
+            }
+        }
+
+        function decrement() {
+            cnt--;
+            document.getElementById("count").innerHTML = cnt;
+              
+            if(cnt == 0){
+                disable.disabled = true;
+            }
+        }
+ </script>
+
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <style>
+        /* Body styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Main container styling */
+        .container {
+            text-align: center;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 40px;
+            width: 300px;
+        }
+
+        /* Heading styles */
+        h1 {
+            background-color: cornflowerblue;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 0;
+            font-size: 2em;
+        }
+
+        /* Count text styling */
+        h2 {
+            font-size: 3em;
+            color: #333;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+
+        /* Button styling */
+        button {
+            background-color: rgba(255, 5, 5, 0.628);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 15px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:disabled {
+            background-color: rgba(255, 5, 5, 0.2);
+            cursor: not-allowed;
+        }
+
+        button:hover:not(:disabled) {
+            background-color: rgba(255, 5, 5, 0.8);
+        }
+
+        /* Button container */
+        .buttons-container {
+            margin-top: 20px;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 480px) {
+            .container {
+                width: 80%;
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 1.8em;
+                padding: 15px;
+            }
+
+            h2 {
+                font-size: 2.5em;
+            }
+
+            button {
+                font-size: 1.1em;
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Counter</h1>
+        <h2 id="count">0</h2>
+        <div class="buttons-container">
+            <button onclick="increment()">+</button>
+            <button id="disable" onclick="decrement()" disabled>-</button>
+        </div>
+    </div>
+
+    <script>
+        let cnt = 0;
+        let disable = document.getElementById("disable");
+
+
+        disable.disabled = true;
+
+        document.getElementById("count").innerHTML = cnt;
+
+        function increment() {
+            cnt++;
+            document.getElementById("count").innerHTML = cnt;
+
+            if (cnt > 0) {
+                disable.disabled = false;
+            }
+        }
+
+        function decrement() {
+            cnt--;
+            document.getElementById("count").innerHTML = cnt;
+
+
+            if (cnt == 0) {
+                disable.disabled = true;
+            }
+        }
+    </script>
+
+</body>
+
+</html>

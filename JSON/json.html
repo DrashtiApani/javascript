@@ -1,0 +1,50 @@
+<script>
+    let data = {
+
+
+        "name": "John",
+        "age": 30,
+        "city": "New York"
+        //   ^      ^
+        //   |      |     
+        //  key  :  value
+
+
+    }
+    console.log(data);
+
+    //  ==> convert object into json(string) 
+
+    let json = JSON.stringify(data);
+
+    console.log(json);
+
+    //  ==> convert array of object into json
+
+    let arr = [
+        { name: "Drashti", age: 21 },
+        { name: "Abhay", age: 19 },
+        { name: "Payal", age: 20 }
+    ];
+
+    let json1 = JSON.stringify(arr);
+
+    console.log(json1);
+
+    // convert srting into json ==> use .PARSE()
+
+    let json2 = JSON.parse(json1);
+
+    console.log(json2);
+
+    // save data into browser ==> use localstorage
+
+    localStorage.setItem('record', JSON.stringify(data)); // => record only stringify data
+    
+    // if above code is delete by default and data is save in local storage then use below code
+
+    let data1 = JSON.parse(localStorage.getItem('record'));
+
+    console.log(data1);
+
+</script>
