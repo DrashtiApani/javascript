@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title> CRUD </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.5.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        .container {
+            width: 600px;
+        }
+
+body {
+    background: linear-gradient(to right, #cfd9df, #e2ebf0); 
+}
+
+
+.table {
+    background-color: #ffffff !important; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+    border-radius: 8px; 
+}
+
+
+.table thead {
+    background-color: #005f73 !important; 
+    color: white; 
+}
+
+
+.table-bordered th,
+.table-bordered td {
+    border: 1px solid #00798c !important; 
+}
+
+
+h2, h4 {
+    color: #005f73;
+       
+}
+
+.btn-primary {
+    background-color: #028090 !important; 
+    border-color: #028090;
+}
+
+.btn-danger {
+    background-color: #d90429 !important; 
+    border-color: #d90429;
+}
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container mt-5" id="loginPage">
+        <h2>Login</h2>
+        <div class="form-group">
+            <label for="loginUsername">Username:</label>
+            <input type="text" id="loginUsername" class="form-control" placeholder="Enter username">
+        </div>
+        <div class="form-group">
+            <label for="loginPassword">Password:</label>
+            <input type="password" id="loginPassword" class="form-control" placeholder="Enter password">
+        </div>
+        <button class="btn btn-primary" onclick="login()">Login</button>
+        <p>Don't have an account? <a href="#" onclick="showRegister()">Register</a></p>
+    </div>
+
+
+
+
+    <div class="container mt-5" id="registerPage" style="display: none;">
+        <h2>Register</h2>
+        <div class="form-group">
+            <label for="registerUsername">Username:</label>
+            <input type="text" id="registerUsername" class="form-control" placeholder="Enter username">
+        </div>
+        <div class="form-group">
+            <label for="registerPassword">Password:</label>
+            <input type="password" id="registerPassword" class="form-control" placeholder="Enter password">
+        </div>
+        <button class="btn btn-success" onclick="register()">Register</button>
+        <p>Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
+    </div>
+
+
+
+
+    <div class="container mt-5" id="crudPage" style="display: none;">
+        <div class="d-flex justify-content-between align-items-center">
+            <h2 align="center">CRUD</h2>
+            <button class="btn btn-danger" onclick="logout()">
+                <i class="fas fa-sign-out-alt"></i> Logout
+            </button>
+        </div>
+        <hr>
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" class="form-control" placeholder="Enter name">
+            <button class="btn btn-primary mt-2" onclick="addData()">Add</button>
+        </div>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="crudTable"></tbody>
+        </table>
+    </div>
+
+
+
+    <script src="./crudApp.js">
+
+    </script>
+</body>
+
+</html>
